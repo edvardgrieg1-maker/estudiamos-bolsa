@@ -637,6 +637,20 @@ async function submitToMailerLite(e) {
     });
   } catch(e) { console.warn('Google Forms backup failed:', e); }
 
+  // --- MAILERLITE NATIVO: dispara el automation ---
+  try {
+    const mlData = new FormData();
+    mlData.append('fields[email]', email);
+    mlData.append('fields[name]', nombre);
+    mlData.append('ml-submit', '1');
+    mlData.append('anticsrf', 'true');
+    fetch('https://assets.mailerlite.com/jsonp/2338084/forms/187269731457172719/subscribe', {
+      method: 'POST',
+      mode: 'no-cors',
+      body: mlData
+    });
+  } catch(e) { console.warn('MailerLite native failed:', e); }
+
   // --- PRINCIPAL: MailerLite ---
   try {
     const res = await fetch('/.netlify/functions/subscribe', {
