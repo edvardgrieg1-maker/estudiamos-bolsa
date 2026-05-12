@@ -15,7 +15,7 @@ exports.handler = async function(event) {
     const payload = JSON.stringify({
       email,
       fields: { name: nombre, last_name: '', company: sugerencia || '' },
-      groups: [GROUP_ID],
+      groups: [1871849983420437831],
       status: 'active',
       resubscribe: true
     });
