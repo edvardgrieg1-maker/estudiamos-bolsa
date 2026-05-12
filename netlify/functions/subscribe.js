@@ -48,7 +48,7 @@ exports.handler = async function(event) {
     const subscriber = JSON.parse(subscriberResult.body);
     const subscriberId = subscriber.data.id;
 
-    const groupPayload = JSON.stringify({});
+    const groupPayload = JSON.stringify({ resubscribe: true });
     await new Promise((resolve, reject) => {
       const options = {
         hostname: 'connect.mailerlite.com',
