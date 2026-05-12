@@ -61,11 +61,14 @@ exports.handler = async function(event) {
       }
     }, groupPayload);
 
-    const emailHtml = `<div style="background:#0D0C0A;font-family:Georgia,serif;max-width:600px;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid rgba(242,239,232,0.1);">
+   const emailHtml = `<div style="background:#0D0C0A;font-family:Georgia,serif;max-width:600px;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid rgba(242,239,232,0.1);">
   <div style="background:#1C1A17;padding:40px;text-align:center;border-bottom:1px solid rgba(242,239,232,0.08);">
     <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;">
       <div style="width:8px;height:8px;border-radius:50%;background:#E85D2F;"></div>
       <span style="color:#F2EFE8;font-size:17px;">Estudiamos Bolsa</span>
+    </div>
+    <div style="width:88px;height:88px;border-radius:50%;border:2.5px solid #E85D2F;margin:0 auto 18px;overflow:hidden;">
+      <img src="https://raw.githubusercontent.com/edvardgrieg1-maker/estudiamos-bolsa/main/adrianfoto.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 10%;" alt="Adrián Eduardo">
     </div>
     <h1 style="color:#F2EFE8;font-size:24px;font-weight:normal;margin:0 0 6px;font-style:italic;">Bienvenido a Estudiamos Bolsa</h1>
     <p style="color:#A09D96;font-size:11px;margin:0;font-family:Arial,sans-serif;letter-spacing:0.08em;text-transform:uppercase;">Análisis fundamental · Inversión a largo plazo</p>
